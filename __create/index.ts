@@ -12,10 +12,8 @@ import { bodyLimit } from 'hono/body-limit';
 import { requestId } from 'hono/request-id';
 import { createHonoServer } from 'react-router-hono-server/node';
 import { serializeError } from 'serialize-error';
-import * as localStore from './local-store.js';
-import { getHTMLForErrorPage } from './get-html-for-error-page';
-import { isAuthAction } from './is-auth-action';
 import { API_BASENAME, api } from './route-builder';
+import sql from '../src/app/api/utils/sql';
 
 const als = new AsyncLocalStorage<{ requestId: string }>();
 
@@ -73,7 +71,8 @@ app.use(
               if (!email || !password) return null;
 
               nodeConsole.log('AUTH: Checking user:', email);
-              const existing = localStore.getUserByEmail(email);
+              const users = await sql`SELECT id, email, name, password, image FROM auth_users WHERE email = ${email}`;
+              const existing = users[0];
 
               if (existing) {
                 // LOGIN flow — verify password
@@ -84,15 +83,20 @@ app.use(
                   return null;
                 }
                 nodeConsole.log('AUTH: Login success for:', email);
-                return { id: existing.id, email: existing.email, name: existing.name, image: existing.image };
+                return { id: existing.id, email: existing.email, name: existing.name ?? '', image: existing.image ?? null };
               }
 
               // SIGNUP flow — create new user
               nodeConsole.log('AUTH: Creating new user:', email);
               const hashed = await hash(password);
-              const newUser = localStore.createUser({ email, name: name ?? '', password: hashed });
-              nodeConsole.log('AUTH: User created:', newUser.id);
-              return { id: newUser.id, email: newUser.email, name: newUser.name, image: null };
+              const id = 'user_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+              const newUser = await sql`
+                INSERT INTO auth_users (id, email, name, password, created_at)
+                VALUES (${id}, ${email}, ${name ?? email.split('@')[0]}, ${hashed}, ${new Date()})
+                RETURNING id, email, name, image
+              `;
+              nodeConsole.log('AUTH: User created:', newUser[0].id);
+              return { id: newUser[0].id, email: newUser[0].email, name: newUser[0].name ?? '', image: newUser[0].image ?? null };
             } catch (err) {
               nodeConsole.error('AUTH: Error in authorize:', err);
               return null;
@@ -173,6 +177,8 @@ app.all('/integrations/:path{.+}', async (c, next) => {
 
 // 5. API Route mounting
 app.route(API_BASENAME, api);
+
+export { app };
 
 export default await createHonoServer({
   app,
