@@ -1,0 +1,174 @@
+{
+  "_auth-CzO2Uz6f.js": {
+    "file": "assets/auth-CzO2Uz6f.js",
+    "name": "auth"
+  },
+  "_google-sheets-bDq2ZrHJ.js": {
+    "file": "assets/google-sheets-bDq2ZrHJ.js",
+    "name": "google-sheets"
+  },
+  "_index-B0OumYWQ.js": {
+    "file": "assets/index-B0OumYWQ.js",
+    "name": "index",
+    "dynamicImports": [
+      "virtual:react-router/server-build",
+      "src/app/api/__create/ssr-test/route.js",
+      "src/app/api/auth/expo-web-success/route.js",
+      "src/app/api/auth/token/route.js",
+      "src/app/api/certifications/route.js",
+      "src/app/api/contractors/[id]/route.js",
+      "src/app/api/contractors/my-profile/route.js",
+      "src/app/api/contractors/route.js",
+      "src/app/api/contractors/verify/route.js",
+      "src/app/api/documents/route.js",
+      "src/app/api/make-admin/route.js",
+      "src/app/api/projects/route.js",
+      "src/app/api/stats/route.js",
+      "src/app/api/submit-kegiatan/route.js",
+      "src/app/api/submit-kontraktor/route.js",
+      "src/app/api/user/role/route.js"
+    ]
+  },
+  "src/app/api/__create/ssr-test/route.js": {
+    "file": "assets/route-CTW8GF-q.js",
+    "name": "route",
+    "src": "src/app/api/__create/ssr-test/route.js",
+    "isDynamicEntry": true
+  },
+  "src/app/api/auth/expo-web-success/route.js": {
+    "file": "assets/route-Ds7wDXew.js",
+    "name": "route",
+    "src": "src/app/api/auth/expo-web-success/route.js",
+    "isDynamicEntry": true
+  },
+  "src/app/api/auth/token/route.js": {
+    "file": "assets/route-CnUs8NfG.js",
+    "name": "route",
+    "src": "src/app/api/auth/token/route.js",
+    "isDynamicEntry": true
+  },
+  "src/app/api/certifications/route.js": {
+    "file": "assets/route-2pNsxPmS.js",
+    "name": "route",
+    "src": "src/app/api/certifications/route.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_auth-CzO2Uz6f.js"
+    ]
+  },
+  "src/app/api/contractors/[id]/route.js": {
+    "file": "assets/route-BliuqY2V.js",
+    "name": "route",
+    "src": "src/app/api/contractors/[id]/route.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_auth-CzO2Uz6f.js",
+      "_google-sheets-bDq2ZrHJ.js"
+    ]
+  },
+  "src/app/api/contractors/my-profile/route.js": {
+    "file": "assets/route-CjMIgMp5.js",
+    "name": "route",
+    "src": "src/app/api/contractors/my-profile/route.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_auth-CzO2Uz6f.js"
+    ]
+  },
+  "src/app/api/contractors/route.js": {
+    "file": "assets/route-C5WjLRPJ.js",
+    "name": "route",
+    "src": "src/app/api/contractors/route.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_auth-CzO2Uz6f.js",
+      "_google-sheets-bDq2ZrHJ.js"
+    ]
+  },
+  "src/app/api/contractors/verify/route.js": {
+    "file": "assets/route-BZkgHUpV.js",
+    "name": "route",
+    "src": "src/app/api/contractors/verify/route.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_auth-CzO2Uz6f.js",
+      "_google-sheets-bDq2ZrHJ.js"
+    ]
+  },
+  "src/app/api/documents/route.js": {
+    "file": "assets/route-ByeQSxba.js",
+    "name": "route",
+    "src": "src/app/api/documents/route.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_auth-CzO2Uz6f.js"
+    ]
+  },
+  "src/app/api/make-admin/route.js": {
+    "file": "assets/route-Bm2T6F6z.js",
+    "name": "route",
+    "src": "src/app/api/make-admin/route.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_auth-CzO2Uz6f.js"
+    ]
+  },
+  "src/app/api/projects/route.js": {
+    "file": "assets/route-KBIXsB81.js",
+    "name": "route",
+    "src": "src/app/api/projects/route.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_auth-CzO2Uz6f.js"
+    ]
+  },
+  "src/app/api/stats/route.js": {
+    "file": "assets/route-CJ3SnGUp.js",
+    "name": "route",
+    "src": "src/app/api/stats/route.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_auth-CzO2Uz6f.js"
+    ]
+  },
+  "src/app/api/submit-kegiatan/route.js": {
+    "file": "assets/route-BGDDcmuM.js",
+    "name": "route",
+    "src": "src/app/api/submit-kegiatan/route.js",
+    "isDynamicEntry": true
+  },
+  "src/app/api/submit-kontraktor/route.js": {
+    "file": "assets/route-DnZhX0Bn.js",
+    "name": "route",
+    "src": "src/app/api/submit-kontraktor/route.js",
+    "isDynamicEntry": true
+  },
+  "src/app/api/user/role/route.js": {
+    "file": "assets/route-GlXCYa4c.js",
+    "name": "route",
+    "src": "src/app/api/user/role/route.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_auth-CzO2Uz6f.js"
+    ]
+  },
+  "src/assets/logo-papua-barat-daya.png": {
+    "file": "assets/logo-papua-barat-daya-sTH_hmMQ.png",
+    "src": "src/assets/logo-papua-barat-daya.png"
+  },
+  "virtual:react-router/server-build": {
+    "file": "assets/server-build.js",
+    "name": "server-build",
+    "src": "virtual:react-router/server-build",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-B0OumYWQ.js"
+    ],
+    "css": [
+      "assets/server-build-De5nPlzQ.css"
+    ],
+    "assets": [
+      "assets/logo-papua-barat-daya-sTH_hmMQ.png"
+    ]
+  }
+}
