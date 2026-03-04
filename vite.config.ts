@@ -36,7 +36,7 @@ export default defineConfig(({ isSsrBuild }) => ({
     nextPublicProcessEnv(),
     restartEnvFileChange(),
     reactRouterHonoServer({
-      serverEntryPoint: './__create/index.ts',
+      serverEntryPoint: './__create/entry-node.ts',
       runtime: 'node',
     }),
     babel({

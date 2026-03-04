@@ -1,9 +1,12 @@
 import { handle } from '@hono/node-server/vercel';
 // @ts-ignore
-import { app } from '../__create/index';
+import server from '../build/server/index.js';
 
 export const config = {
     runtime: 'nodejs',
 };
 
-export default handle(app);
+// The bundled server from react-router-hono-server 
+// usually exports the Hono app as default or a property.
+// Based on build/server/index.js check, it exports a default.
+export default handle(server.app || server);
