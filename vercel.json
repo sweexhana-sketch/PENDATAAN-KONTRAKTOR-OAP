@@ -1,21 +1,18 @@
 {
     "version": 2,
-    "buildCommand": "npm run build",
-    "installCommand": "npm install",
-    "outputDirectory": "build/client",
     "functions": {
-        "api/**": {
-            "maxDuration": 10
+        "api/index.ts": {
+            "runtime": "nodejs20.x"
         }
     },
-    "rewrites": [
+    "routes": [
         {
-            "source": "/api/(.*)",
-            "destination": "/api/index"
+            "src": "/api/(.*)",
+            "dest": "/api/index.ts"
         },
         {
-            "source": "/(.*)",
-            "destination": "/api/index"
+            "src": "/(.*)",
+            "dest": "/api/index.ts"
         }
     ]
 }
