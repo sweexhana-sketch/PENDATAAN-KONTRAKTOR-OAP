@@ -1,0 +1,41 @@
+﻿node : Error listing users:
+ Error: No database connect
+ion string was provided to 
+`neon()`. Perhaps process.e
+nv.DATABASE_URL has not bee
+n set
+At line:1 char:1
++ node list-users.js 2>&1 |
+ Out-File -FilePath list-us
+ers-error.txt -En ...
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (Err  
+  or listing u...as not    
+ been set:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+    at NullishQueryFunction
+ (file:///D:/APLIKASI/anyth
+ing/anything/apps/web/src/a
+pp/api/utils/sql.js:4:9)
+    at listUsers (file:///D
+:/APLIKASI/anything/anythin
+g/apps/web/list-users.js:5:
+32)
+    at file:///D:/APLIKASI/
+anything/anything/apps/web/
+list-users.js:12:1
+    at ModuleJob.run (node:
+internal/modules/esm/module
+_job:413:25)
+    at async onImport.trace
+Promise.__proto__ (node:int
+ernal/modules/esm/loader:66
+0:26)
+    at async asyncRunEntryP
+ointWithESMLoader (node:int
+ernal/modules/run_main:101:
+5)
