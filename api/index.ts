@@ -1,8 +1,12 @@
 import { handle } from '@hono/node-server/vercel';
-import app from '../build/server/index.js'; // Sesuaikan dengan lokasi export Hono kamu
+// @ts-ignore
+import * as server from '../build/server/index.js';
+
+// The bundled server from react-router-hono-server exports { app }
+const app = server.app || (server.default && server.default.app) || server.default;
 
 export const config = {
-    runtime: 'edge',
+    runtime: 'nodejs',
 };
 
 export default handle(app);
