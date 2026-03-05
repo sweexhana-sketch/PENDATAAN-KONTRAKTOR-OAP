@@ -1,7 +1,7 @@
 {
   "version": 2,
   "installCommand": "npm install --legacy-peer-deps",
-  "buildCommand": "node node_modules/@react-router/dev/bin.js build --no-typecheck",
+  "buildCommand": "npm run build:vercel",
   "framework": "vite",
   "outputDirectory": "build/client",
   "rewrites": [
