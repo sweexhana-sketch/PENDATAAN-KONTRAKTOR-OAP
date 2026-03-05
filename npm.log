@@ -1,0 +1,40 @@
+﻿node.exe : npm notice Acces
+s token expired or revoked.
+ Please try logging in agai
+n.
+At line:1 char:1
++ & "C:\Program Files\nodej
+s/node.exe" "C:\Program Fil
+es\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (npm  
+   notice Acce...gging i   
+ n again.:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+npm error code E404
+npm error 404 Not Found - G
+ET https://registry.npmjs.o
+rg/@react-router%2fvercel -
+ Not found
+npm error 404
+npm error 404  The requeste
+d resource '@react-router/v
+ercel@*' could not be found
+ or you do not have permiss
+ion to access it.
+npm error 404
+npm error 404 Note that you
+ can also install from a
+npm error 404 tarball, fold
+er, http url, or git url.
+npm error A complete log of
+ this run can be found in: 
+C:\Users\ASUS\AppData\Local
+\npm-cache\_logs\2026-03-05
+T02_56_52_939Z-debug-0.log

@@ -1,3 +1,4 @@
+// @ts-nocheck
 const originalFetch = fetch;
 const isBackend = () => typeof window === 'undefined';
 

@@ -1,0 +1,138 @@
+﻿
+> build:vercel
+> react-router build
+
+Generated routes: [
+  undefined,
+  'account/logout',
+  'account/signin',
+  'account/signup',
+  'admin/contractors',
+  'admin/contractors/:id',
+  'admin/dashboard',
+  'admin/make-first-admin',
+  'contractor/profile',
+  'contractor/register',
+  'dashboard',
+  '*?'
+]
+Generated routes: [
+  undefined,
+  'account/logout',
+  'account/signin',
+  'account/signup',
+  'admin/contractors',
+  'admin/contractors/:id',
+  'admin/dashboard',
+  'admin/make-first-admin',
+  'contractor/profile',
+  'contractor/register',
+  'dashboard',
+  '*?'
+]
+Generated routes: [
+  undefined,
+  'account/logout',
+  'account/signin',
+  'account/signup',
+  'admin/contractors',
+  'admin/contractors/:id',
+  'admin/dashboard',
+  'admin/make-first-admin',
+  'contractor/profile',
+  'contractor/register',
+  'dashboard',
+  '*?'
+]
+[36mvite v6.4.1 [32mbuilding for production...[36m[39m
+transforming...
+[32mÔ£ô[39m 1742 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mbuild/client/[22m[32m.vite/manifest.json                        [39m[1m[2m  8.61 kB[22m[1m[22m[2m Ôöé gzip:  1.02 kB[22m
+[2mbuild/client/[22m[32massets/logo-papua-barat-daya-sTH_hmMQ.png  [39m[1m[2m473.53 kB[22m[1m[22m
+[2mbuild/client/[22m[35massets/root-8GWqgzpy.css                   [39m[1m[2m 30.64 kB[22m[1m[22m[2m Ôöé gzip:  6.27 kB[22m
+[2mbuild/client/[22m[36massets/logo-papua-barat-daya-jIY4wwmQ.js   [39m[1m[2m  0.07 kB[22m[1m[22m[2m Ôöé gzip:  0.09 kB[22m
+[2mbuild/client/[22m[36massets/arrow-left-DDvIOLzU.js              [39m[1m[2m  0.62 kB[22m[1m[22m[2m Ôöé gzip:  0.40 kB[22m
+[2mbuild/client/[22m[36massets/circle-x-Dw6gwPEr.js                [39m[1m[2m  0.67 kB[22m[1m[22m[2m Ôöé gzip:  0.42 kB[22m
+[2mbuild/client/[22m[36massets/users-P0WKRRdv.js                   [39m[1m[2m  0.76 kB[22m[1m[22m[2m Ôöé gzip:  0.46 kB[22m
+[2mbuild/client/[22m[36massets/file-text-BpNe9mQN.js               [39m[1m[2m  0.79 kB[22m[1m[22m[2m Ôöé gzip:  0.45 kB[22m
+[2mbuild/client/[22m[36massets/clock-CB8VxAQC.js                   [39m[1m[2m  1.23 kB[22m[1m[22m[2m Ôöé gzip:  0.50 kB[22m
+[2mbuild/client/[22m[36massets/page-kzfOGdzm.js                    [39m[1m[2m  2.96 kB[22m[1m[22m[2m Ôöé gzip:  1.00 kB[22m
+[2mbuild/client/[22m[36massets/createLucideIcon-BGIhaqTb.js        [39m[1m[2m  3.41 kB[22m[1m[22m[2m Ôöé gzip:  1.07 kB[22m
+[2mbuild/client/[22m[36massets/PolymorphicComponent-DDE2kZdg.js    [39m[1m[2m  4.22 kB[22m[1m[22m[2m Ôöé gzip:  1.50 kB[22m
+[2mbuild/client/[22m[36massets/not-found-B1sDuxDb.js               [39m[1m[2m  6.35 kB[22m[1m[22m[2m Ôöé gzip:  2.30 kB[22m
+[2mbuild/client/[22m[36massets/page-Dw9PMWQA.js                    [39m[1m[2m  6.54 kB[22m[1m[22m[2m Ôöé gzip:  2.06 kB[22m
+[2mbuild/client/[22m[36massets/page-Bbq0qc8P.js                    [39m[1m[2m  7.64 kB[22m[1m[22m[2m Ôöé gzip:  2.72 kB[22m
+[2mbuild/client/[22m[36massets/page-B7UXS30-.js                    [39m[1m[2m  8.17 kB[22m[1m[22m[2m Ôöé gzip:  2.29 kB[22m
+[2mbuild/client/[22m[36massets/page-2DiaBRLt.js                    [39m[1m[2m  8.44 kB[22m[1m[22m[2m Ôöé gzip:  2.85 kB[22m
+[2mbuild/client/[22m[36massets/entry.client-HHC5BQds.js            [39m[1m[2m  8.45 kB[22m[1m[22m[2m Ôöé gzip:  2.87 kB[22m
+[2mbuild/client/[22m[36massets/react-B1_RP8Ul.js                   [39m[1m[2m  9.03 kB[22m[1m[22m[2m Ôöé gzip:  3.29 kB[22m
+[2mbuild/client/[22m[36massets/page-DU3wGDNX.js                    [39m[1m[2m 10.15 kB[22m[1m[22m[2m Ôöé gzip:  2.81 kB[22m
+[2mbuild/client/[22m[36massets/page-CzEu5tYC.js                    [39m[1m[2m 10.31 kB[22m[1m[22m[2m Ôöé gzip:  2.64 kB[22m
+[2mbuild/client/[22m[36massets/page-t01Gdevo.js                    [39m[1m[2m 14.80 kB[22m[1m[22m[2m Ôöé gzip:  3.50 kB[22m
+[2mbuild/client/[22m[36massets/page-DcD1daXz.js                    [39m[1m[2m 17.57 kB[22m[1m[22m[2m Ôöé gzip:  4.18 kB[22m
+[2mbuild/client/[22m[36massets/page--YO1pGsE.js                    [39m[1m[2m 19.16 kB[22m[1m[22m[2m Ôöé gzip:  4.32 kB[22m
+[2mbuild/client/[22m[36massets/layout-CszGJ7B2.js                  [39m[1m[2m 36.58 kB[22m[1m[22m[2m Ôöé gzip:  8.94 kB[22m
+[2mbuild/client/[22m[36massets/page-C-KAd-gK.js                    [39m[1m[2m 40.76 kB[22m[1m[22m[2m Ôöé gzip: 10.34 kB[22m
+[2mbuild/client/[22m[36massets/root-BbD_M_XE.js                    [39m[1m[2m107.70 kB[22m[1m[22m[2m Ôöé gzip: 27.64 kB[22m
+[2mbuild/client/[22m[36massets/chunk-LFPYN7LY-B4Ti7GfX.js          [39m[1m[2m128.29 kB[22m[1m[22m[2m Ôöé gzip: 42.54 kB[22m
+[2mbuild/client/[22m[36massets/index-BznDj7aO.js                   [39m[1m[2m136.06 kB[22m[1m[22m[2m Ôöé gzip: 43.56 kB[22m
+[32mÔ£ô built in 28.17s[39m
+Generated routes: [
+  undefined,
+  'account/logout',
+  'account/signin',
+  'account/signup',
+  'admin/contractors',
+  'admin/contractors/:id',
+  'admin/dashboard',
+  'admin/make-first-admin',
+  'contractor/profile',
+  'contractor/register',
+  'dashboard',
+  '*?'
+]
+[36mvite v6.4.1 [32mbuilding SSR bundle for production...[36m[39m
+transforming...
+node.exe : [33msrc/__creat
+e/useDevServerHeartbeat.ts 
+(1:0): Error when using sou
+rcemap for reporting an err
+or: Can't resolve original 
+location of error.[39m
+At line:1 char:1
++ & "C:\Program Files\nodej
+s/node.exe" "C:\Program Fil
+es\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: ([3  
+  3msrc/__crea... of err   
+ or.[39m:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+[33m"Upload" is imported f
+rom external module "lucide
+-react" but never used in "
+src/app/contractor/register
+/page.jsx?noLayout.jsx".[3
+9m
+[32mÔ£ô[39m 63 modules transformed.
+rendering chunks...
+[2mbuild/server/[22m[32m.vite/manifest.json                        [39m[1m[2m  0.71 kB[22m[1m[22m
+[2mbuild/server/[22m[32massets/logo-papua-barat-daya-sTH_hmMQ.png  [39m[1m[2m473.53 kB[22m[1m[22m
+[2mbuild/server/[22m[35massets/server-build-De5nPlzQ.css           [39m[1m[2m 30.62 kB[22m[1m[22m
+[2mbuild/server/[22m[36mindex.js                                   [39m[1m[2m  0.75 kB[22m[1m[22m
+[2mbuild/server/[22m[36massets/entry-node-zHeA9ruc.js              [39m[1m[2m 56.78 kB[22m[1m[22m
+[2mbuild/server/[22m[36massets/server-build.js                     [39m[1m[2m296.54 kB[22m[1m[22m
+
+[32mÔ£ô[39m 2 assets cleaned from React Router server build.
+[2mbuild\client\assets\logo-papua-barat-daya-sTH_hmMQ.png[22m
+[2mbuild\server\assets\server-build-De5nPlzQ.css[22m
+
+[32mÔ£ô built in 9.90s[39m
