@@ -1,5 +1,4 @@
 import { handle } from '@hono/node-server/vercel';
-// @ts-ignore
 import * as server from '../build/server/index.js';
 
 // The bundled server from react-router-hono-server exports { app }
