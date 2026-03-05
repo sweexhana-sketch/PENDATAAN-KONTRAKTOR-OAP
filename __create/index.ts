@@ -13,7 +13,8 @@ import { requestId } from 'hono/request-id';
 import { createHonoServer } from 'react-router-hono-server/node';
 import { serializeError } from 'serialize-error';
 import { API_BASENAME, api } from './route-builder';
-import sql from '../src/app/api/utils/sql';
+// @ts-ignore
+import sql from '../src/app/api/utils/sql.js';
 
 const als = new AsyncLocalStorage<{ requestId: string }>();
 
@@ -30,7 +31,7 @@ for (const method of ['log', 'info', 'warn', 'error', 'debug'] as const) {
   };
 }
 
-const app = new Hono<{ Bindings: AuthEnv }>();
+const app = new Hono<{ Bindings: AuthEnv; Variables: { requestId: string } }>();
 
 // 1. Global Logging & Interception
 app.use('*', async (c, next) => {
@@ -116,7 +117,7 @@ app.all('/api/auth/*', async (c, next) => {
 // 3. Middlewares
 app.use('*', requestId());
 app.use('*', (c, next) => {
-  const requestId = c.get('requestId');
+  const requestId = c.get('requestId') as string;
   return als.run({ requestId }, () => next());
 });
 app.use(contextStorage());
@@ -131,8 +132,20 @@ app.onError((err, c) => {
       500
     );
   }
-  return c.html(getHTMLForErrorPage(err), 200);
+  return c.html(getHTMLForErrorPage(err), 200 as any);
 });
+
+function getHTMLForErrorPage(err: any): string {
+  return `
+    <html>
+      <head><title>Error</title></head>
+      <body>
+        <h1>An error occurred</h1>
+        <pre>${err.stack || err.message}</pre>
+      </body>
+    </html>
+  `;
+}
 
 if (process.env.CORS_ORIGINS) {
   app.use(
@@ -163,6 +176,7 @@ app.all('/integrations/:path{.+}', async (c, next) => {
   return proxy(url, {
     method: c.req.method,
     body: c.req.raw.body ?? null,
+    // @ts-ignore
     duplex: 'half',
     redirect: 'manual',
     headers: {
