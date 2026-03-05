@@ -4,8 +4,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "react-router dev",
-		"build": "react-router build",
-		"build:vercel": "node node_modules/@react-router/dev/bin.js build",
+		"build": "node patch-react-router.cjs && node node_modules/@react-router/dev/bin.js build",
+		"build:vercel": "node patch-react-router.cjs && node node_modules/@react-router/dev/bin.js build",
 		"start": "react-router-serve ./build/server/index.js",
 		"typecheck": "react-router typegen && tsc --noEmit",
 		"postinstall": "node patch-react-router.cjs"
