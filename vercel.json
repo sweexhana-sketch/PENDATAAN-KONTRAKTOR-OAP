@@ -1,7 +1,7 @@
 {
   "version": 2,
   "installCommand": "npm install --legacy-peer-deps",
-  "buildCommand": "npx react-router build",
+  "buildCommand": "node node_modules/@react-router/dev/bin.js build",
   "framework": "vite",
   "outputDirectory": "build/client",
   "rewrites": [
