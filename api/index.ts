@@ -1,9 +1,10 @@
 import { handle } from '@hono/node-server/vercel';
-// @ts-ignore
-import * as server from '../build/server/index.js';
+import { Hono } from 'hono';
 
-// The bundled server from react-router-hono-server exports { app }
-const app = server.app || (server.default && server.default.app) || server.default;
+const app = new Hono();
+
+app.get('/', (c) => c.text('Hello from Vercel! API is running.'));
+app.all('*', (c) => c.json({ message: 'Catch all route working' }, 200));
 
 export const config = {
     runtime: 'nodejs',
