@@ -9,8 +9,8 @@ if (globalThis.fetch) {
   globalThis.fetch = updatedFetch;
 }
 
-// Use import.meta.glob to find all API routes. This works in both dev and prod.
-const routeModules = import.meta.glob('../src/app/api/**/route.js');
+// Use import.meta.glob to find all API routes. Eagerly load them to avoid top-level await deadlocks.
+const routeModules = import.meta.glob('../src/app/api/**/route.js', { eager: true });
 
 // Helper function to transform file path to Hono route path
 function getHonoPath(path: string): string {
@@ -43,8 +43,8 @@ function getHonoPath(path: string): string {
   return `/${transformedParts.join('/')}`;
 }
 
-// Import and register all routes
-async function registerRoutes() {
+// Import and register all routes synchronously
+function registerRoutes() {
   const sortedPaths = Object.keys(routeModules).sort((a, b) => b.length - a.length);
 
   // Clear existing routes if needed (though usually not necessary in prod)
@@ -52,8 +52,8 @@ async function registerRoutes() {
 
   for (const path of sortedPaths) {
     try {
-      // routeModules[path] is a function that returns a promise of the module
-      const route: any = await routeModules[path]();
+      // routeModules[path] is eagerly evaluated, so it's the module export itself
+      const route: any = routeModules[path];
       const honoPath = getHonoPath(path);
 
       const methods = ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'];
@@ -62,9 +62,6 @@ async function registerRoutes() {
           const handler: Handler = async (c) => {
             const params = c.req.param();
             try {
-              // In production, we just use the pre-imported route
-              // If we wanted to support hot reloading in dev with glob, 
-              // we'd need a different approach, but Vite handles glob reload.
               return await route[method](c.req.raw, { params });
             } catch (err) {
               console.error(`Error in ${method} ${honoPath}:`, err);
@@ -82,8 +79,8 @@ async function registerRoutes() {
   }
 }
 
-// Initial route registration
-await registerRoutes();
+// Initial route registration synchronously
+registerRoutes();
 
 // Hot reload routes in development
 if (import.meta.env.DEV && import.meta.hot) {
