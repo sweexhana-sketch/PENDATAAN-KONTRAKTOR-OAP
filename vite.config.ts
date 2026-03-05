@@ -1,6 +1,5 @@
 import path from 'node:path';
 import { reactRouter } from '@react-router/dev/vite';
-import { vercelPreset } from '@vercel/react-router/vite';
 import { reactRouterHonoServer } from 'react-router-hono-server/dev';
 import { defineConfig } from 'vite';
 import babel from 'vite-plugin-babel';
@@ -62,9 +61,7 @@ export default defineConfig(({ isSsrBuild }) => ({
     consoleToParent(),
     loadFontsFromTailwindSource(),
     addRenderIds(),
-    reactRouter({
-      presets: [vercelPreset()],
-    }),
+    reactRouter(),
     tsconfigPaths(),
     aliases(),
     layoutWrapperPlugin(),
