@@ -10,7 +10,8 @@ try {
         const patchString = '\nprocess.argv = process.argv.filter(arg => arg !== "--no-typecheck");\n';
 
         if (!content.includes(patchString.trim())) {
-            content = content.replace('#!/usr/bin/env node', '#!/usr/bin/env node' + patchString);
+            // Inject the patch right after the shebang
+            content = content.replace(/^#!.*\n/, match => match + patchString);
             fs.writeFileSync(binPath, content, 'utf8');
             console.log('✅ Successfully patched @react-router/dev/bin.js to ignore --no-typecheck');
         } else {
